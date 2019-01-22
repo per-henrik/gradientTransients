@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .button {
+      background-size: 100%;
+      background-image: linear-gradient(#fff, #ccc);
+      border-radius: 0.45rem;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      color: #333;
+      display: inline-block;
+      font-size: 1.25rem;
+      font-weight: 300;
+      padding: 1rem 1.5rem;
+      position: relative;
+      z-index: 100;
+    }
+    .button:before {
+    border-radius: inherit;
+    background-image: linear-gradient(#c9c, #fff);
+    content: '';    
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity 0.45s;
+  }
+  .button:hover:before {
+      opacity: 1;
+  }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Does this gradient transient?</h1>
+  <div class="button">
+    Wow! Such :hover!
+  </div>
+</body>
+
+</html>
